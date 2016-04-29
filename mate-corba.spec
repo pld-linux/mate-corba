@@ -2,7 +2,7 @@ Summary:	MateCORBA - a fork of GNOME's ORBit
 Summary(pl.UTF-8):	MateCORBA - odgałęzienie ORBita z GNOME
 Name:		mate-corba
 Version:	1.4.1
-Release:	2
+Release:	3
 License:	LGPL v2+ (libraries), GPL v2+
 Group:		Libraries
 Source0:	http://pub.mate-desktop.org/releases/1.4/%{name}-%{version}.tar.xz
@@ -59,6 +59,9 @@ Summary:	MateCORBA API documentation
 Summary(pl.UTF-8):	Dokumentacja API MateCORBA
 Group:		Documentation
 Requires:	gtk-doc-common
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 MateCORBA API documentation.
